@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karolaine Cred Fh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .carousel-container {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        .carousel-container img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 20px;
+            z-index: 10;
+        }
+        .carousel-btn-left {
+            left: 10px;
+        }
+        .carousel-btn-right {
+            right: 10px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 600px; /* Ajuste para a altura desejada */
+            object-fit: cover;
+}
+
+
+    </style>
+</head>
+<body class="font-[Poppins]">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-2">
+            <div>
+                <img src="assets/logo.png" alt="Karolaine Cred" class="h-14">
+            </div>
+
+            <nav>
+                <ul class="flex space-x-2 font-medium">
+                    <li><a href="institucional.html" class="hover:text-gray-600 transition">A Karolaine Cred</a></li>
+                    <li><a href="produtos.html" class="hover:text-gray-600 transition">Produtos</a></li>
+                    <li><a href="unidades.html" class="hover:text-gray-600 transition">Unidades</a></li>
+                    <li><a href="parceiros.html" class="hover:text-gray-600 transition">Parceiros</a></li>
+                    <li><a href="contato.html" class="hover:text-gray-600 transition">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="flex space-x-4 text-gray-800 social-icons">
+                <a href="#"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook text-xl"></i></a>
+            </div>
+
+            <div>
+                <a href="#" class="button-online">Contrate On-Line</a>
+            </div>
+        </div>
+        <div class="header-line"></div>
+    </header>
+
+    <!-- Slider de Imagens -->
+    <section class="carousel" onmouseover="pauseSlide()" onmouseout="resumeSlide()">
+        <button class="carousel-btn carousel-btn-left" onclick="prevSlide()">&#10094;</button>
+        <div class="carousel-container" id="carousel">
+            <img src="assets/CARTÃO BENEFICIO.png" alt="Cartão Benefício">
+            <img src="assets/CARTÃO CONSIGNADO.png" alt="Cartão Consignado">
+            <img src="assets/CONTRATO NOVO.png" alt="Contrato Novo">
+            <img src="assets/CREDITO PESSOAL.png" alt="Crédito Pessoal">
+            <img src="assets/EMPRESTIMO BOLSA FAMILIA.png" alt="Empréstimo Bolsa Família">
+        </div>
+        <button class="carousel-btn carousel-btn-right" onclick="nextSlide()">&#10095;</button>
+    </section>
+
+    <!-- Seção de Prévia das Páginas -->
+    <main class="container mx-auto mt-10 p-4">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-gray-100 p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold text-green-900">A Karolaine Cred</h2>
+                <p class="text-gray-700 mt-2">Conheça nossa história e missão no mercado financeiro, oferecendo soluções em empréstimos.</p>
+                <a href="institucional.html" class="text-orange-500 font-semibold mt-4 inline-block">Saiba mais →</a>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold text-green-900">Produtos</h2>
+                <p class="text-gray-700 mt-2">Confira nossos produtos de crédito, incluindo empréstimos consignados e pessoais.</p>
+                <a href="produtos.html" class="text-orange-500 font-semibold mt-4 inline-block">Saiba mais →</a>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold text-green-900">Unidades</h2>
+                <p class="text-gray-700 mt-2">Encontre a unidade Karolaine Cred mais próxima de você.</p>
+                <a href="unidades.html" class="text-orange-500 font-semibold mt-4 inline-block">Saiba mais →</a>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold text-green-900">Parceiros</h2>
+                <p class="text-gray-700 mt-2">Conheça nossos parceiros e como trabalhamos juntos para oferecer as melhores soluções.</p>
+                <a href="parceiros.html" class="text-orange-500 font-semibold mt-4 inline-block">Saiba mais →</a>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold text-green-900">Contato</h2>
+                <p class="text-gray-700 mt-2">Fale conosco e tire suas dúvidas sobre nossos serviços.</p>
+                <a href="contato.html" class="text-orange-500 font-semibold mt-4 inline-block">Saiba mais →</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Script do Carrossel -->
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll(".carousel-container img");
+        const totalSlides = slides.length;
+        let interval;
+
+        function showSlide(n) {
+            if (n >= totalSlides) index = 0;
+            if (n < 0) index = totalSlides - 1;
+            document.getElementById("carousel").style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextSlide() {
+            index++;
+            showSlide(index);
+        }
+
+        function prevSlide() {
+            index--;
+            showSlide(index);
+        }
+
+        function startSlideShow() {
+            interval = setInterval(nextSlide, 6000);
+        }
+
+        function pauseSlide() {
+            clearInterval(interval);
+        }
+
+        function resumeSlide() {
+            startSlideShow();
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            startSlideShow();
+        });
+    </script>
+
+</body>
+</html>

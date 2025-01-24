@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Configuração geral */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do cabeçalho */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo */
+.container img {
+    height: 56px;
+}
+
+/* Menu de Navegação */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1B5E20; /* Verde escuro */
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+/* Linha laranja ao passar o mouse */
+nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background-color: #FF9800; /* Laranja */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1);
+}
+
+/* Linha verde abaixo do cabeçalho */
+.header-line {
+    height: 4px;
+    background-color: #1B5E20;
+    width: 100%;
+}
+
+/* Ícones de redes sociais */
+.social-icons a {
+    color: #1B5E20;
+    font-size: 20px;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #43A047;
+}
+
+/* Botão Contrate On-Line */
+.button-online {
+    background-color: #43A047;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.button-online:hover {
+    background-color: #2E7D32;
+}
