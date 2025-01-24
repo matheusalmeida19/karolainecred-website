@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* Configuração geral */
-body {
-    font-family: 'Poppins', sans-serif;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 /* Estilização do cabeçalho */
 header {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .container {
@@ -97,4 +103,97 @@ nav ul li:hover::after {
 
 .button-online:hover {
     background-color: #2E7D32;
+}
+
+/* Swiper Carrossel */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+}
+
+/* Fundo laranja apenas na seção do carrossel */
+.carousel-section {
+    background-color: #FF9800; /* Fundo laranja */
+    padding: 0; /* Remove qualquer padding extra */
+    margin: 0; /* Remove qualquer margem extra */
+}
+
+/* Botões do Carrossel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 24px;
+    z-index: 10;
+    border-radius: 50%; /* Deixa o botão redondo */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-btn-left {
+    left: 15px;
+}
+
+.carousel-btn-right {
+    right: 15px;
+}
+
+/* Efeito hover nos botões do carrossel */
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    transform: scale(1.15);
+}
+
+/* Ícones de seta dentro dos botões */
+.carousel-btn i {
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+.carousel-btn:hover i {
+    color: #1B5E20;
+}
+
+.swiper-container {
+    margin-top: 0 !important; /* Garante que não tenha margem superior */
+    padding-top: 0 !important; /* Remove qualquer padding extra */
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+    bottom: 10px !important;
+    position: absolute;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .swiper-container {
+        max-height: 500px;
+    }
 }
